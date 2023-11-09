@@ -27,6 +27,7 @@ const singlePost = require('./routes/singlePost');
 const createPost = require('./routes/createPost');
 
 app.use("/", indexRoute);
+app.use("/post", singlePost);
   
   app.listen(port, () => {
     console.log(`Example app listening on port ${port}`)
