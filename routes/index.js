@@ -4,11 +4,11 @@ const router = express.Router();
 const firestore = require("firebase/firestore");
 // reference to db 
 const db = firestore.getFirestore();
+// port
 
 router.get("/", (req, res) => {
 const postsQuery = firestore.getDocs(firestore.collection(db, "posts"));
 const postsArray = [];
-
 
 postsQuery
 .then((response) => {
